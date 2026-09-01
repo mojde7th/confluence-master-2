@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Confluence Master 2 — توالی عملی</title>
+<link rel="stylesheet" href="app.css"/>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="brand">
+    <strong>Master 2</strong>
+    <small>تایپ خودت · بدون اسکریپت آماده</small>
+    <div class="prog"><i></i></div>
+    <small id="readCount">0</small>
+    <div class="unread-box" id="unreadBox"></div>
+  </div>
+  <div class="tabs">
+    <button class="on" data-tab="all">همه</button>
+    <button data-tab="undo">پاک</button>
+    <button data-tab="cert">گواهی</button>
+    <button data-tab="cfg">فایل</button>
+    <button data-tab="today">امروز</button>
+    <button data-tab="more">بعد</button>
+  </div>
+  <div class="grp open" data-tab="undo">
+    <button>پاک کردن کار قبلی</button>
+    <ul>
+      <li><a href="#start"><i class="dot"></i>قانون امروز</a></li>
+      <li><a href="#picture"><i class="dot"></i>تصویر بزرگ: چه چیزی به چه چیزی وصل است</a></li>
+      <li><a href="#undo"><i class="dot"></i>پاک کردن گواهی و پوشه‌ای که من ساختم</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="cert">
+    <button>گواهی از صفر</button>
+    <ul>
+      <li><a href="#whyred"><i class="dot"></i>قفل قرمز یعنی چه</a></li>
+      <li><a href="#winget"><i class="dot"></i>وینگت چرا کار نکرد</a></li>
+      <li><a href="#path"><i class="dot"></i>مسیر ویندوز را چه چیزهایی خراب کرده</a></li>
+      <li><a href="#ps"><i class="dot"></i>پاورشل را درست باز کن</a></li>
+      <li><a href="#getmk"><i class="dot"></i>دانلود برنامه صدور گواهی</a></li>
+      <li><a href="#installca"><i class="dot"></i>نصب ریشه در انبار ویندوز</a></li>
+      <li><a href="#makecrt"><i class="dot"></i>ساخت فایل گواهی برای انجین‌ایکس</a></li>
+      <li><a href="#reload"><i class="dot"></i>بارگذاری دوباره پراکسی</a></li>
+      <li><a href="#chrome"><i class="dot"></i>کروم: بستن کامل و تست</a></li>
+      <li><a href="#edge"><i class="dot"></i>اج: چرا هنوز قرمز است</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="cfg">
+    <button>کدام فایل را عوض کنی</button>
+    <ul>
+      <li><a href="#which"><i class="dot"></i>سه فایل، نه داخل ظرف</a></li>
+      <li><a href="#compose"><i class="dot"></i>فایل ترکیب: جستجو و چه را دست نزن</a></li>
+      <li><a href="#nginx"><i class="dot"></i>فایل انجین‌ایکس</a></li>
+      <li><a href="#baseurl"><i class="dot"></i>آدرس پایه داخل محصول</a></li>
+      <li><a href="#dont"><i class="dot"></i>لیست دست‌نزن</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="today">
+    <button>کار امروز روی سایت</button>
+    <ul>
+      <li><a href="#login"><i class="dot"></i>ورود فقط از آدرس امن</a></li>
+      <li><a href="#p1"><i class="dot"></i>صفحه یک: پوشه جلسات</a></li>
+      <li><a href="#p2"><i class="dot"></i>صفحه دو: صورت‌جلسه</a></li>
+      <li><a href="#p3"><i class="dot"></i>صفحه سه: صورت‌جلسه دوم</a></li>
+      <li><a href="#ppwhat"><i class="dot"></i>خصوصیات صفحه یعنی چه</a></li>
+      <li><a href="#ppdo"><i class="dot"></i>گذاشتن خصوصیات روی صورت‌جلسه</a></li>
+      <li><a href="#ppreport"><i class="dot"></i>گزارش خصوصیات یعنی آمار</a></li>
+      <li><a href="#shamsi"><i class="dot"></i>تاریخ شمسی بدون انتخابگر توکار</a></li>
+      <li><a href="#sync"><i class="dot"></i>آزمایش ویرایش همزمان</a></li>
+    </ul>
+  </div>
+  <div class="grp open" data-tab="more">
+    <button>رابط، زبان، رئیس</button>
+    <ul>
+      <li><a href="#pat"><i class="dot"></i>توکن شخصی</a></li>
+      <li><a href="#rest"><i class="dot"></i>ساخت صفحه با رابط</a></li>
+      <li><a href="#boss"><i class="dot"></i>منظور رئیس از رابط خارجی</a></li>
+      <li><a href="#shop"><i class="dot"></i>دمو: فروشگاه لباس به صفحه</a></li>
+      <li><a href="#lang"><i class="dot"></i>زبان و فروشگاه اپ</a></li>
+      <li><a href="#adminfa"><i class="dot"></i>تنظیمات محصول برای فارسی</a></li>
+      <li><a href="#attach"><i class="dot"></i>پیوست اکسل بدون همراه</a></li>
+      <li><a href="#gpo"><i class="dot"></i>جی‌پی‌او یعنی چه</a></li>
+      <li><a href="#container"><i class="dot"></i>کی داخل ظرف می‌روی</a></li>
+      <li><a href="#trouble"><i class="dot"></i>اگر شکست</a></li>
+      <li><a href="#check"><i class="dot"></i>چک‌لیست امشب</a></li>
+    </ul>
+  </div>
+</aside>
+<main class="main">
+  <div class="topbar">
+    <div class="row">
+      <button id="btnReadTop">این صفحه را خواندم</button>
+      <button id="btnNextTop">بعدیِ نخوانده</button>
+      <button id="btnOnlyUnread">فقط نخوانده‌ها</button>
+      <button id="btnReset">پاک کردن تیک‌ها</button>
+    </div>
+    <div class="unread-box" id="unreadBoxTop"></div>
+  </div>
+
+  <section class="page" id="start">
+    <p class="kicker">شروع</p>
+    <h1>این راهنما را خط به خط انجام بده. هیچ فایل آماده را اجرا نکن</h1>
+    <p class="say">ریپوی قبلی سر جایش می‌ماند. اینجا نسخهٔ دو است. دستورها را خودت در پاورشل تایپ می‌کنی. اسکریپت در پوشه نمی‌گذارم.</p>
+    <p class="say">آدرس کار فقط این است. اگر چیز دیگری در نوار باشد، ببند.</p>
+<pre class="ltr" dir="ltr">https://localhost:8443</pre>
+    <p class="term">localhost</p>
+    <p class="def">یعنی همین کامپیوتر، نه سرور شرکت. عدد بعد از دو نقطه پورت است.</p>
+    <div class="navp"><span></span><a href="#picture" data-go="picture">تصویر بزرگ</a></div>
+  </section>
+
+  <section class="page" id="picture">
+    <p class="kicker">تصویر بزرگ</p>
+    <h1>روزانه داخل ظرف نمی‌روی</h1>
+    <p class="say">مرورگر به پورت امن وصل می‌شود. برنامهٔ انجین‌ایکس رمز را باز می‌کند و متن ساده را به تامکت می‌دهد. تامکت کانفلوئنس است. پستگرس داده را نگه می‌دارد. تو در ویندوز پاورشل و کروم کار می‌کنی.</p>
+    <p class="term">container</p>
+    <p class="def">ظرف: یک فرایند ایزوله که داکر اجرا می‌کند. مثل یک مینی‌لینوکس برای همان برنامه. ورود با دستور exec فقط برای اشکال‌زدایی است، نه کار روزانه.</p>
+    <p class="term">reverse proxy</p>
+    <p class="def">پراکسی معکوس: درِ جلویی. اینجا انجین‌ایکس است. کلاینت او را می‌بیند، نه تامکت را.</p>
+    <p class="term">TLS termination</p>
+    <p class="def">تمام‌کردن تونل رمز در لبه: انجین‌ایکس گواهی را نشان می‌دهد و رمز را باز می‌کند. تامکت گواهی ندارد.</p>
+    <div class="navp"><a href="#start" data-go="start">قبلی</a><a href="#undo" data-go="undo">پاک کردن</a></div>
+  </section>
+
+  <section class="page" id="undo">
+    <p class="kicker">پاک کردن</p>
+    <h1>اول آنچه من روی این ماشین گذاشتم را بردار، بعد خودت از صفر نصب کن</h1>
+    <p class="say">من یک‌بار برنامهٔ صدور گواهی را اجرا کردم. ریشه در انبار کاربر نشست. فایل‌های ریشه هنوز در پوشهٔ محلی تو هستند. فایل گواهی جلوی انجین‌ایکس هم عوض شده. برنامهٔ اجرایی را از پوشهٔ ابزار پاک کردم؛ ریشه را نه.</p>
+    <div class="step"><b class="n">مرحله ۱ · پاورشل را باز کن</b>
+      <p class="say">کلید ویندوز را نگه دار، کلید ایکس را بزن. «ویندوز پاورشل» را انتخاب کن. سی‌ام‌دی نه.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · ببین ریشه هنوز هست</b>
+      <p class="say">این را کامل تایپ کن، اینتر.</p>
+<pre class="ltr" dir="ltr">Get-ChildItem $env:LOCALAPPDATA\mkcert</pre>
+      <p class="say">باید دو فایل ببینی: کلید ریشه و گواهی ریشه. اگر پوشه نبود، مرحلهٔ پوشه را رد کن.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · ریشه را از انبار ویندوز حذف کن</b>
+      <p class="say">کلید ویندوز و آر. در جعبه بنویس و اینتر بزن:</p>
+<pre class="ltr" dir="ltr">certmgr.msc</pre>
+      <p class="term">certmgr.msc</p>
+      <p class="def">مدیر گواهی کاربر جاری. فهرست اعتماد همین حساب ویندوز، نه همهٔ شرکت.</p>
+      <p class="say">در درخت چپ: شخصی → صدور گواهی ریشهٔ معتبر → گواهی‌ها. در لیست راست ستونی به نام صادرشده برای. ردیفی که سازمان آن «توسعهٔ ام‌کی‌سرت» است پیدا کن. روی آن راست‌کلیک، حذف. اگر ویندوز پرسید، بله.</p>
+      <p class="say">در همان فهرست اگر ردیف‌هایی دیدی که هم نام و هم صادرکننده فقط لوکال‌هاست است، آن‌ها گواهی خودامضای قدیمی‌اند که گاهی اج را گیج می‌کنند. همان‌ها را هم حذف کن. ریشه‌های مایکروسافت و ویندوز را دست نزن.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۴ · پوشهٔ ریشه را پاک کن</b>
+<pre class="ltr" dir="ltr">Remove-Item -Recurse -Force $env:LOCALAPPDATA\mkcert</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۵ · اگر پوشهٔ ابزار مانده</b>
+<pre class="ltr" dir="ltr">Test-Path D:\tools\mkcert</pre>
+      <p class="say">اگر درست بود:</p>
+<pre class="ltr" dir="ltr">Remove-Item -Recurse -Force D:\tools\mkcert</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۶ · کروم و اج را کامل ببند</b>
+      <p class="say">همهٔ پنجره‌ها را ببند. مدیر وظایف: کلیدهای کنترل، شیفت، اسکیپ. فرایندهای کروم و اج را پایان وظیفه بده تا پس‌زمینه نماند.</p>
+    </div>
+    <p class="say">بعد از این مراحل قفل کروم دوباره قرمز می‌شود. این درست است. از صفحهٔ بعد خودت نصب می‌کنی.</p>
+    <div class="navp"><a href="#picture" data-go="picture">قبلی</a><a href="#whyred" data-go="whyred">قفل قرمز</a></div>
+  </section>
+
+  <section class="page" id="whyred">
+    <p class="kicker">گواهی</p>
+    <h1>چرا جزئیات گواهی لوکال‌هاست است ولی باز ناامن می‌گوید</h1>
+    <p class="say">دست‌دادن رمز موفق است. مرورگر نام را می‌بیند. اعتماد ندارد چون صادرکننده یک مرجع عمومی نیست و در انبار ریشه‌های ویندوز نبوده. جزئیات گواهی ≠ قفل سبز.</p>
+    <p class="term">self-signed</p>
+    <p class="def">خودامضا: فایل خودش را امضا کرده. برای آزمایشگاه رایج است. کروم آن را «مرجع نامعتبر» می‌داند مگر ریشه جدا در انبار باشد.</p>
+    <p class="term">CA</p>
+    <p class="def">مرجع گواهی: یک ریشه که ویندوز قبول دارد. برنامهٔ ام‌کی‌سرت یک ریشهٔ محلی می‌سازد و در انبار می‌گذارد، بعد گواهی سایت را با آن امضا می‌کند. آن‌وقت قفل سبز می‌شود.</p>
+    <p class="term">SAN</p>
+    <p class="def">نام جایگزین موضوع: فهرست نام‌های داخل گواهی. باید با نوار آدرس یکی باشد. اینجا لوکال‌هاست و نشانی حلقه.</p>
+    <div class="navp"><a href="#undo" data-go="undo">قبلی</a><a href="#winget" data-go="winget">وینگت</a></div>
+  </section>
+
+  <section class="page" id="winget">
+    <p class="kicker">گواهی</p>
+    <h1>وینگت روی این ویندوز در مسیر نیست</h1>
+    <p class="say">پیام «شناخته نشد» یعنی برنامه نصب نیست یا پوشه‌اش در فهرست جستجو نیست. روی این ماشین پوشهٔ برنامه‌های ویندوز خالی از وینگت بود. از وینگت استفاده نکن. فایل اجرایی را از گیت‌هاب خودت دانلود کن.</p>
+    <div class="navp"><a href="#whyred" data-go="whyred">قبلی</a><a href="#path" data-go="path">مسیر</a></div>
+  </section>
+
+  <section class="page" id="path">
+    <p class="kicker">گواهی</p>
+    <h1>فهرست جستجو خراب است؛ کل درایو را اضافه نکن</h1>
+    <p class="term">PATH</p>
+    <p class="def">فهرست پوشه‌هایی که ویندوز وقتی فقط نام برنامه را می‌زنی، آنجا را می‌گردد. اگر پوشه در این فهرست نباشد باید مسیر کامل فایل را بنویسی.</p>
+    <p class="say">روی این ماشین یک خط جاوا با گیومهٔ وسط خراب است. درایو دی و ای به‌صورت کل دیسک در فهرست‌اند. این‌ها را دست نزن مگر بدانی. برای کار امروز نیاز نیست کل مسیر را تعمیر کنی. برنامه را با مسیر کامل صدا بزن.</p>
+    <p class="say">اگر خواستی فقط یک پوشه اضافه کنی: تنظیمات ویندوز → سیستم → درباره → تنظیمات پیشرفته سیستم → متغیرهای محیطی → متغیرهای کاربر → Path → جدید. فقط پوشه‌ای که فایل اجرایی صدور گواهی را خودت آنجا گذاشتی. اینتر، باشه، یک پاورشل تازه باز کن.</p>
+    <div class="navp"><a href="#winget" data-go="winget">قبلی</a><a href="#ps" data-go="ps">پاورشل</a></div>
+  </section>
+
+  <section class="page" id="ps">
+    <p class="kicker">گواهی</p>
+    <h1>پاورشل را از اینجا باز کن</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">ویندوز به‌علاوهٔ ایکس → ویندوز پاورشل.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · برو به پوشهٔ گواهی انجین‌ایکس</b>
+<pre class="ltr" dir="ltr">Set-Location D:\atlassian-software\nginx-lab\ssl
+Get-ChildItem</pre>
+      <p class="say">باید دو فایل ببینی: گواهی و کلید. الان ممکن است هنوز امضای قبلی باشد. بعد عوضشان می‌کنی.</p>
+    </div>
+    <div class="navp"><a href="#path" data-go="path">قبلی</a><a href="#getmk" data-go="getmk">دانلود</a></div>
+  </section>
+
+  <section class="page" id="getmk">
+    <p class="kicker">گواهی</p>
+    <h1>دانلود برنامه؛ در پوشهٔ خودت بگذار</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">پوشه‌ای که خودت می‌سازی، مثلاً:</p>
+<pre class="ltr" dir="ltr">New-Item -ItemType Directory -Force -Path D:\bin | Out-Null</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · مرورگر</b>
+      <p class="say">این نشانی را در کروم باز کن. فایل ویندوز شصت‌وچهار را ذخیره کن.</p>
+<pre class="ltr" dir="ltr">https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-windows-amd64.exe</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · اسم را عوض کن و بگذار در پوشه</b>
+      <p class="say">فایل دانلودشده را ببر به پوشه‌ای که ساختی و اسمش را این بگذار:</p>
+<pre class="ltr" dir="ltr">D:\bin\mkcert.exe</pre>
+      <p class="say">اگر جای دیگری ذخیره کردی، در مرحله‌های بعد همان مسیر کامل را بنویس.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۴ · تست</b>
+<pre class="ltr" dir="ltr">D:\bin\mkcert.exe -help</pre>
+      <p class="say">باید متن راهنما بیاید نه «شناخته نشد».</p>
+    </div>
+    <div class="navp"><a href="#ps" data-go="ps">قبلی</a><a href="#installca" data-go="installca">نصب ریشه</a></div>
+  </section>
+
+  <section class="page" id="installca">
+    <p class="kicker">گواهی</p>
+    <h1>نصب ریشه در انبار ویندوز</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+<pre class="ltr" dir="ltr">D:\bin\mkcert.exe -install</pre>
+      <p class="say">یک پنجرهٔ کنترل حساب کاربری می‌آید. بله. باید بگوید ریشه در انبار سیستم نصب شد.</p>
+      <p class="say">اگر جاوا گفت دسترسی رد شد، نادیده بگیر. قفل مرورگر از انبار ویندوز است نه از جاوا.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · تأیید در مدیر گواهی</b>
+<pre class="ltr" dir="ltr">certmgr.msc</pre>
+      <p class="say">دوباره همان مسیر ریشهٔ معتبر. باید ردیف توسعهٔ ام‌کی‌سرت را ببینی.</p>
+    </div>
+    <div class="navp"><a href="#getmk" data-go="getmk">قبلی</a><a href="#makecrt" data-go="makecrt">ساخت گواهی سایت</a></div>
+  </section>
+
+  <section class="page" id="makecrt">
+    <p class="kicker">گواهی</p>
+    <h1>ساخت گواهی که انجین‌ایکس نشان می‌دهد</h1>
+    <div class="step"><b class="n">مرحله ۱ · برو به پوشهٔ اس‌اس‌ال لاب</b>
+<pre class="ltr" dir="ltr">Set-Location D:\atlassian-software\nginx-lab\ssl</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · صدور با نام‌های درست</b>
+<pre class="ltr" dir="ltr">D:\bin\mkcert.exe -cert-file lab.crt -key-file lab.key localhost 127.0.0.1 ::1</pre>
+      <p class="say">باید بگوید گواهی برای این نام‌ها ساخته شد. دو فایل گواهی و کلید جایگزین می‌شوند.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · ذخیرهٔ جدا لازم نیست</b>
+      <p class="say">انجین‌ایکس همین دو اسم فایل را از قبل می‌خواند. کنترل اس اینجا معنی ندارد؛ فایل را خود برنامه نوشت.</p>
+    </div>
+    <div class="navp"><a href="#installca" data-go="installca">قبلی</a><a href="#reload" data-go="reload">بارگذاری پراکسی</a></div>
+  </section>
+
+  <section class="page" id="reload">
+    <p class="kicker">گواهی</p>
+    <h1>پراکسی باید فایل جدید را بخواند</h1>
+    <div class="step"><b class="n">مرحله ۱ · آزمون پیکربندی</b>
+<pre class="ltr" dir="ltr">docker exec confluence-proxy nginx -t</pre>
+      <p class="say">باید بگوید نحو درست است و آزمون موفق.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · بارگذاری بدون خاموش کردن کل پشته</b>
+<pre class="ltr" dir="ltr">docker exec confluence-proxy nginx -s reload</pre>
+      <p class="term">reload</p>
+      <p class="def">فرآیند همان است؛ پیکربندی و گواهی را دوباره می‌خواند. ظرف کانفلوئنس را ری‌استارت نمی‌کند.</p>
+    </div>
+    <div class="navp"><a href="#makecrt" data-go="makecrt">قبلی</a><a href="#chrome" data-go="chrome">کروم</a></div>
+  </section>
+
+  <section class="page" id="chrome">
+    <p class="kicker">گواهی</p>
+    <h1>کروم را کامل ببند، بعد فقط آدرس امن</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">همهٔ پنجره‌های کروم را ببند. در مدیر وظایف اگر کروم ماند، پایان وظیفه.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">کروم را باز کن. در نوار دقیقاً این را بزن، اینتر:</p>
+<pre class="ltr" dir="ltr">chrome://restart</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۳</b>
+<pre class="ltr" dir="ltr">https://localhost:8443</pre>
+      <p class="say">قفل باید بدون «ادامه به سایت ناامن» سبز یا خاکستری امن باشد. روی قفل بزن. صادرکننده باید همان ریشهٔ ام‌کی‌سرت باشد نه خود لوکال‌هاست.</p>
+    </div>
+    <div class="navp"><a href="#reload" data-go="reload">قبلی</a><a href="#edge" data-go="edge">اج</a></div>
+  </section>
+
+  <section class="page" id="edge">
+    <p class="kicker">گواهی</p>
+    <h1>کروم سبز و اج قرمز، بدون صفحهٔ خطا</h1>
+    <p class="say">هر دو از انبار ویندوز می‌خوانند. اگر کروم ریشه را قبول کرده و اج هنوز قرمز است، معمولاً اج کهنه است، یا تب روی پورت خام است، یا محتوای آمیخته است نه رد گواهی.</p>
+    <div class="step"><b class="n">مرحله ۱ · ببین نوار اج چیست</b>
+      <p class="say">اگر با این شروع می‌شود، همان را ببند:</p>
+<pre class="ltr" dir="ltr">http://localhost:8090</pre>
+      <p class="say">فقط همان آدرس امن هشت‌هزار و چهارصد و چهل و سه.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · اج را مثل کروم کامل بکش</b>
+      <p class="say">همهٔ پنجره‌ها. مدیر وظایف: همهٔ ردیف‌های اج را پایان وظیفه. اج را از سینی هم ببند اگر ماند.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳</b>
+<pre class="ltr" dir="ltr">edge://restart</pre>
+      <p class="say">بعد فقط:</p>
+<pre class="ltr" dir="ltr">https://localhost:8443</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۴ · قفل را بخوان، حدس نزن</b>
+      <p class="say">روی آیکون قفل در اج بزن. اگر نوشت گواهی نامعتبر است، ریشه در اج دیده نشده: مرحلهٔ مدیر گواهی را تکرار کن، اج را دوباره بکش. اگر نوشت اتصال امن است ولی آیکون هنوز هشدار می‌دهد، اغلب یعنی منابع ناامن در صفحه — کانفلوئنس هنوز پورت خام را در سیاست محتوا ذکر می‌کند. این خطای گواهی نیست. کار امروز را در کروم سبز ادامه بده؛ اج را بعد از بستن همهٔ تب‌های پورت خام دوباره بسنج.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۵ · انبار اج همان انبار ویندوز است</b>
+      <p class="say">اج → تنظیمات → حریم خصوصی → گواهی‌ها را مدیریت کن → ریشهٔ معتبر. باید همان ردیف ام‌کی‌سرت باشد. اگر نیست، نصب ریشه را دوباره بزن و اج را کامل بکش.</p>
+    </div>
+    <div class="navp"><a href="#chrome" data-go="chrome">قبلی</a><a href="#which" data-go="which">کدام فایل</a></div>
+  </section>
+
+  <section class="page" id="which">
+    <p class="kicker">فایل</p>
+    <h1>برای قفل سبز هیچ خطی از ترکیب را عوض نکن</h1>
+    <p class="say">سه جا تنظیم داری. امروز فقط گواهی روی دیسک و انبار ویندوز. ترکیب و انجین‌ایکس از قبل پورت پراکسی را درست گفته‌اند. داخل ظرف نرو.</p>
+    <table>
+      <thead><tr><th>کجا</th><th>مسیر</th><th>امروز عوض؟</th></tr></thead>
+      <tbody>
+        <tr><td>گواهی روی دیسک</td><td>پوشهٔ اس‌اس‌ال لاب</td><td>بله، با صدور خودت</td></tr>
+        <tr><td>ترکیب</td><td>فایل یامل کانفلوئنس</td><td>نه، مگر نام میزبان عوض شود</td></tr>
+        <tr><td>انجین‌ایکس</td><td>کانف لاب</td><td>نه برای قفل</td></tr>
+        <tr><td>آدرس پایه</td><td>داخل محصول</td><td>فقط اگر هنوز پورت خام است</td></tr>
+      </tbody>
+    </table>
+    <div class="navp"><a href="#edge" data-go="edge">قبلی</a><a href="#compose" data-go="compose">ترکیب</a></div>
+  </section>
+
+  <section class="page" id="compose">
+    <p class="kicker">فایل</p>
+    <h1>فایل ترکیب را باز کن، جستجو کن، ذخیره نکن اگر عوض نکردی</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">در کرسر یا نوت‌پد این فایل را باز کن:</p>
+<pre class="ltr" dir="ltr">D:\atlassian-software\confluence-compose.yml</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · جستجو</b>
+      <p class="say">کنترل اف. این را بزن:</p>
+<pre class="ltr" dir="ltr">ATL_PROXY</pre>
+      <p class="say">باید این چهار خط را ببینی. اگر همین‌ها هستند، هیچی را عوض نکن. کنترل اس نزن.</p>
+<pre class="ltr" dir="ltr">ATL_PROXY_NAME: localhost
+ATL_PROXY_PORT: 8443
+ATL_TOMCAT_SCHEME: "https"
+ATL_TOMCAT_SECURE: "true"</pre>
+      <p class="term">ATL_PROXY_PORT</p>
+      <p class="def">پورتی که مرورگر در نوار می‌بیند، نه پورت داخل ظرف. ظرف انجین‌ایکس داخلش چهارصد و چهل و سه گوش می‌دهد؛ روی ویندوز به هشت‌هزار و چهارصد و چهل و سه نقشه شده.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳</b>
+      <p class="say">کنترل اف برای پورت‌ها. نقشهٔ هشت‌هزار و نود و هشت‌هزار و نود و یک بماند. در مرورگر استفاده نشوند.</p>
+    </div>
+    <div class="navp"><a href="#which" data-go="which">قبلی</a><a href="#nginx" data-go="nginx">انجین‌ایکس</a></div>
+  </section>
+
+  <section class="page" id="nginx">
+    <p class="kicker">فایل</p>
+    <h1>فایل پراکسی را فقط بخوان</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+<pre class="ltr" dir="ltr">D:\atlassian-software\nginx-lab\confluence.conf</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · کنترل اف</b>
+<pre class="ltr" dir="ltr">ssl_certificate</pre>
+      <p class="say">باید به گواهی و کلید داخل ظرف اشاره کند که از پوشهٔ اس‌اس‌ال لاب سوار شده. اسم فایل را عوض نکن مگر خودت در صدور اسم دیگری گذاشته باشی.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · کنترل اف</b>
+<pre class="ltr" dir="ltr">Host</pre>
+      <p class="say">باید میزبان با پورت هشت‌هزار و چهارصد و چهل و سه باشد. اگر فقط لوکال‌هاست بدون پورت باشد لینک‌ها می‌شکنند.</p>
+    </div>
+    <div class="navp"><a href="#compose" data-go="compose">قبلی</a><a href="#baseurl" data-go="baseurl">آدرس پایه</a></div>
+  </section>
+
+  <section class="page" id="baseurl">
+    <p class="kicker">فایل</p>
+    <h1>داخل محصول، کلیک به کلیک</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+<pre class="ltr" dir="ltr">https://localhost:8443</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">چرخ‌دنده بالا راست → مدیریت → پیکربندی عمومی → آدرس پایهٔ سرور.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳</b>
+      <p class="say">باید عیناً همان نوار باشد. اگر پورت خام بود، امن را بگذار و ذخیره. اگر امن بود و تو پورت خام را باز کرده‌ای، تب را عوض کن نه این مقدار را.</p>
+    </div>
+    <div class="navp"><a href="#nginx" data-go="nginx">قبلی</a><a href="#dont" data-go="dont">دست نزن</a></div>
+  </section>
+
+  <section class="page" id="dont">
+    <p class="kicker">فایل</p>
+    <h1>دست نزن</h1>
+    <ul>
+      <li>نقشهٔ دو پورت خام در ترکیب</li>
+      <li>چهار خط پراکسی تامکت اگر با نوار یکی است</li>
+      <li>ورود به ظرف برای عوض کردن سرور ایکس‌ام‌ال؛ از متغیر محیطی می‌آید</li>
+      <li>آدرس پایه را به پورت خام برنگردان</li>
+    </ul>
+    <div class="navp"><a href="#baseurl" data-go="baseurl">قبلی</a><a href="#login" data-go="login">ورود</a></div>
+  </section>
+
+  <section class="page" id="login">
+    <p class="kicker">امروز</p>
+    <h1>وارد شو، فضای کار را باز کن</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+<pre class="ltr" dir="ltr">https://localhost:8443</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">فضا را از منوی فضاها باز کن. کلید کوتاه فضا همان است که در رابط می‌گذاری، نه لزوماً نام نمایشی.</p>
+    </div>
+    <div class="navp"><a href="#dont" data-go="dont">قبلی</a><a href="#p1" data-go="p1">صفحه یک</a></div>
+  </section>
+
+  <section class="page" id="p1">
+    <p class="kicker">امروز</p>
+    <h1>صفحه یک: پوشهٔ جلسات</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">در فضا: ایجاد → صفحه.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · عنوان دقیق</b>
+<pre class="ltr" dir="ltr">10-meetings</pre>
+      <p class="say">همین، بدون فاصلهٔ اضافه. ذخیره.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳</b>
+      <p class="say">اگر از قبل بود، صفحهٔ جدید نساز. همان را باز کن.</p>
+    </div>
+    <div class="navp"><a href="#login" data-go="login">قبلی</a><a href="#p2" data-go="p2">صفحه دو</a></div>
+  </section>
+
+  <section class="page" id="p2">
+    <p class="kicker">امروز</p>
+    <h1>صفحه دو: یک صورت‌جلسهٔ فرزند</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">روی پوشهٔ جلسات باش. ایجاد → صفحه. والد باید همان جلسات باشد.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · عنوان</b>
+<pre class="ltr" dir="ltr">meet-1404-06-11</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · سه خط در بدنه</b>
+      <p class="say">حاضرین، تصمیم، اقدام. ذخیره.</p>
+    </div>
+    <div class="navp"><a href="#p1" data-go="p1">قبلی</a><a href="#p3" data-go="p3">صفحه سه</a></div>
+  </section>
+
+  <section class="page" id="p3">
+    <p class="kicker">امروز</p>
+    <h1>صفحه سه: صورت‌جلسهٔ دوم تا گزارش معنی داشته باشد</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">باز هم فرزند جلسات. عنوان:</p>
+<pre class="ltr" dir="ltr">meet-1404-06-12</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">دو خط تصمیم. ذخیره. دو صفحه لازم است تا جدول گزارش حداقل دو ردیف داشته باشد.</p>
+    </div>
+    <div class="navp"><a href="#p2" data-go="p2">قبلی</a><a href="#ppwhat" data-go="ppwhat">خصوصیات یعنی چه</a></div>
+  </section>
+
+  <section class="page" id="ppwhat">
+    <p class="kicker">امروز</p>
+    <h1>خصوصیات صفحه آمار جادویی نیست؛ یک جدول کلید–مقدار است</h1>
+    <p class="say">روی یک صفحه یک ماکرو می‌گذاری. دو ستون: نام ویژگی، مقدار. مثلاً تاریخ شمسی، وضعیت، نویسنده. این جدول در خود صفحه دیده می‌شود.</p>
+    <p class="say">ماکروی گزارش خصوصیات در یک صفحهٔ دیگر می‌گردد همهٔ فرزندانی که آن ماکرو را دارند و از همان کلیدها یک جدول جمع می‌سازد. آمار یعنی همین ردیف‌ها، نه نمودار پنهان.</p>
+    <p class="term">Page Properties</p>
+    <p class="def">ماکروی خصوصیات صفحه: جعبهٔ فراداده روی همان صفحه.</p>
+    <p class="term">Page Properties Report</p>
+    <p class="def">گزارش خصوصیات: جدول تجمیعی روی صفحهٔ والد یا یک صفحهٔ فهرست.</p>
+    <div class="navp"><a href="#p3" data-go="p3">قبلی</a><a href="#ppdo" data-go="ppdo">گذاشتن خصوصیات</a></div>
+  </section>
+
+  <section class="page" id="ppdo">
+    <p class="kicker">امروز</p>
+    <h1>روی صورت‌جلسه بگذار</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">صفحهٔ صورت‌جلسه را ویرایش کن. مکان‌نما بالای بدنه.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">ممیز ممیز برای ماکرو. تایپ کن:</p>
+<pre class="ltr" dir="ltr">Page Properties</pre>
+      <p class="say">اینتر. داخل ماکرو یک جدول دو ستونه بساز.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · ردیف‌ها</b>
+<pre class="ltr" dir="ltr">date_fa     | 1404/06/11
+status      | done
+owner       | mojde</pre>
+      <p class="say">ذخیره. روی صورت‌جلسهٔ دوم همین کار با تاریخ روز بعد.</p>
+    </div>
+    <div class="navp"><a href="#ppwhat" data-go="ppwhat">قبلی</a><a href="#ppreport" data-go="ppreport">گزارش</a></div>
+  </section>
+
+  <section class="page" id="ppreport">
+    <p class="kicker">امروز</p>
+    <h1>روی پوشهٔ جلسات یک گزارش بگذار</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">ویرایش <i class="en">10-meetings</i>. ممیز ممیز.</p>
+<pre class="ltr" dir="ltr">Page Properties Report</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">فضا را همین فضا بگذار. برچسب لازم نیست اگر همهٔ فرزندان خصوصیات دارند. ستون‌ها: همان سه کلید. ذخیره.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳</b>
+      <p class="say">باید دو ردیف صورت‌جلسه با تاریخ شمسی دیده شود. اگر خالی است: خصوصیات ذخیره نشده یا کلیدها با ستون گزارش یکی نیست.</p>
+    </div>
+    <div class="navp"><a href="#ppdo" data-go="ppdo">قبلی</a><a href="#shamsi" data-go="shamsi">شمسی</a></div>
+  </section>
+
+  <section class="page" id="shamsi">
+    <p class="kicker">امروز</p>
+    <h1>انتخابگر تاریخ شمسی توکار ندارد</h1>
+    <p class="say">تقویم محصول میلادی است. برای لاب: همان سلول متنی تاریخ شمسی در خصوصیات. بستهٔ زبان فارسی تقویم را شمسی نمی‌کند؛ فقط برچسب‌های رابط را عوض می‌کند اگر بسته باشد.</p>
+    <div class="navp"><a href="#ppreport" data-go="ppreport">قبلی</a><a href="#sync" data-go="sync">همزمانی</a></div>
+  </section>
+
+  <section class="page" id="sync">
+    <p class="kicker">امروز</p>
+    <h1>پورت همزمانی را باز نکن؛ دو پنجره روی همان صفحه</h1>
+    <p class="term">Synchrony</p>
+    <p class="def">موتور ویرایش همزمان. روی پورت داخلی گوش می‌دهد. پاسخ خالی به مرورگر می‌دهد. سایت نیست.</p>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">فقط آدرس امن. صورت‌جلسه را باز کن. ویرایش.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">پنجرهٔ ناشناس همان آدرس، همان صفحه، ویرایش. در یکی یک کلمه تایپ کن. اگر در دیگری زنده آمد، همزمانی کار می‌کند.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · این را نزن</b>
+<pre class="ltr" dir="ltr">http://localhost:8091</pre>
+      <p class="say">سفید بودن آنجا شکست نیست.</p>
+    </div>
+    <div class="navp"><a href="#shamsi" data-go="shamsi">قبلی</a><a href="#pat" data-go="pat">توکن</a></div>
+  </section>
+
+  <section class="page" id="pat">
+    <p class="kicker">رابط</p>
+    <h1>توکن بساز؛ در گیت نگذار</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">آواتار → تنظیمات → توکن‌های دسترسی شخصی → ایجاد. نام آزمایشی. ایجاد. رشته را جایی روی دیسک خودت بگذار نه در ریپو.</p>
+    </div>
+    <p class="term">PAT</p>
+    <p class="def">توکن دسترسی شخصی. به‌جای نام‌کاربری و رمز در سربرگ. روی این نسخه ورود پایه برای رابط خاموش است.</p>
+    <div class="navp"><a href="#sync" data-go="sync">قبلی</a><a href="#rest" data-go="rest">رابط</a></div>
+  </section>
+
+  <section class="page" id="rest">
+    <p class="kicker">رابط</p>
+    <h1>هویت، بعد ساخت فرزند؛ هر خط را خودت تایپ کن</h1>
+    <p class="term">REST</p>
+    <p class="def">سبک فراخوانی با نشانی و فعل اچ‌تی‌تی‌پی. گرفتن برای خواندن، پست برای ساختن.</p>
+    <div class="step"><b class="n">مرحله ۱ · در پاورشل، گواهی لاب</b>
+      <p class="say">اگر هنوز هشدار گواهی در پاورشل دیدی این دو خط را بزن، بعد درخواست.</p>
+<pre class="ltr" dir="ltr">$base = "https://localhost:8443"
+$token = "اینجا-توکن"
+$h = @{ Authorization = "Bearer $token"; Accept = "application/json"; "Content-Type" = "application/json" }</pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+<pre class="ltr" dir="ltr">Invoke-RestMethod -Headers $h -Uri "$base/rest/api/user/current"</pre>
+      <p class="say">باید نام کاربری بیاید. چهارصد و یک یعنی توکن غلط.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۳ · شناسهٔ والد</b>
+<pre class="ltr" dir="ltr">$r = Invoke-RestMethod -Headers $h -Uri "$base/rest/api/content?spaceKey=NMAECO&amp;title=10-meetings"
+$r.results | ForEach-Object { $_.id; $_.title }
+$parentId = $r.results[0].id</pre>
+    </div>
+    <div class="navp"><a href="#pat" data-go="pat">قبلی</a><a href="#boss" data-go="boss">رئیس</a></div>
+  </section>
+
+  <section class="page" id="boss">
+    <p class="kicker">رابط</p>
+    <h1>رابط فروش لباس داخل کانفلوئنس توکار نیست؛ دو مرحله است</h1>
+    <p class="say">کانفلوئنس یک رابط برای صفحه‌های خودش دارد. فروشگاه لباس یک رابط دیگر روی اینترنت است. محصول اطلسیان خودش rasht-e-lebas را صدا نمی‌زند مگر تو برنامه‌ای وسط بنویسی.</p>
+    <p class="say">الگوی رئیس معمولاً این است: اسکریپت از بیرون داده را می‌گیرد، جدول می‌سازد، با همان توکن یک صفحه یا پیوست در کانفلوئنس می‌گذارد. این ادغام است، نه اینکه کانفلوئنس فروشگاه باشد.</p>
+    <div class="navp"><a href="#rest" data-go="rest">قبلی</a><a href="#shop" data-go="shop">دمو فروشگاه</a></div>
+  </section>
+
+  <section class="page" id="shop">
+    <p class="kicker">رابط</p>
+    <h1>دمو با یک رابط عمومی؛ خودت تایپ کن</h1>
+    <p class="say">این نشانی نمونهٔ عمومی کالا است نه فروشگاه شما. اول در پاورشل بخوان، بعد اچ‌تی‌ام‌ال جدول را بساز و به کانفلوئنس پست کن.</p>
+    <div class="step"><b class="n">مرحله ۱ · خواندن نمونه</b>
+<pre class="ltr" dir="ltr">$items = Invoke-RestMethod "https://fakestoreapi.com/products?limit=3"
+$items | ForEach-Object { $_.title } </pre>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">اگر مرحلهٔ هویت سبز است، بدنهٔ صفحه را از همین عنوان‌ها بساز و پست کن به ساخت محتوا، با والد جلسات. اگر این نشانی از شبکهٔ تو بسته است، همین الگوی دو مرحله را روی رابط فروشگاه خودتان بگذار.</p>
+    </div>
+    <div class="navp"><a href="#boss" data-go="boss">قبلی</a><a href="#lang" data-go="lang">زبان</a></div>
+  </section>
+
+  <section class="page" id="lang">
+    <p class="kicker">زبان</p>
+    <h1>منوی زبان تا بسته نصب نشود خالی است</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">مدیریت → مدیریت اپ‌ها → یافتن اپ جدید. اگر پیام پوشهٔ گواهی فروشگاه آمد، آن پوشه قبلاً روی ظرف ساخته شده. صفحه را تازه کن. ظرف را فقط اگر پیام ماند ری‌استارت کن.</p>
+<pre class="ltr" dir="ltr">docker restart confluence</pre>
+      <p class="say">دو دقیقه صبر.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲</b>
+      <p class="say">جستجو: بستهٔ زبان. اگر فارسی در فهرست نبود محدودیت محصول است. متن صفحه را همچنان فارسی تایپ می‌کنی.</p>
+    </div>
+    <div class="navp"><a href="#shop" data-go="shop">قبلی</a><a href="#adminfa" data-go="adminfa">تنظیمات فارسی</a></div>
+  </section>
+
+  <section class="page" id="adminfa">
+    <p class="kicker">زبان</p>
+    <h1>چه چیزی در محصول برای فارسی می‌ماند</h1>
+    <p class="say">راست‌به‌چپ در خود متن صفحه کار می‌کند. قالب پیش‌فرض چپ‌چین است. تاریخ نسبی تا زبان رابط انگلیسی است انگلیسی می‌ماند. انتخابگر شمسی توکار نیست. برای صورت‌جلسه همان ویژگی متنی تاریخ کافی است.</p>
+    <p class="say">آواتار → تنظیمات → زبان فقط بعد از نصب بسته پر می‌شود.</p>
+    <div class="navp"><a href="#lang" data-go="lang">قبلی</a><a href="#attach" data-go="attach">پیوست</a></div>
+  </section>
+
+  <section class="page" id="attach">
+    <p class="kicker">امروز</p>
+    <h1>اکسل داخل تب، اکسل واقعی نیست</h1>
+    <div class="step"><b class="n">مرحله ۱</b>
+      <p class="say">صورت‌جلسه → پایین → پیوست‌ها → بارگذاری. فایل اکسل.</p>
+    </div>
+    <div class="step"><b class="n">مرحله ۲ · نسخهٔ بعد</b>
+      <p class="say">سه‌نقطه روی فایل → بارگذاری نسخهٔ جدید. همراه لازم نیست.</p>
+    </div>
+    <div class="navp"><a href="#adminfa" data-go="adminfa">قبلی</a><a href="#gpo" data-go="gpo">جی‌پی‌او</a></div>
+  </section>
+
+  <section class="page" id="gpo">
+    <p class="kicker">واژه</p>
+    <h1>این کلمه مال شرکت است نه لاب تو</h1>
+    <p class="term">GPO</p>
+    <p class="def">شیء سیاست گروه: بستهٔ تنظیمات که دامنهٔ ویندوز روی همهٔ رایانهٔ عضو هل می‌دهد. ریشهٔ سازمانی را این‌طور به کلاینت‌ها می‌رسانند. روی لاب خانگی تو وجود ندارد. معادل لاب: مدیر گواهی و ام‌کی‌سرت برای همین کاربر.</p>
+    <div class="navp"><a href="#attach" data-go="attach">قبلی</a><a href="#container" data-go="container">ظرف</a></div>
+  </section>
+
+  <section class="page" id="container">
+    <p class="kicker">ظرف</p>
+    <h1>کی داخل می‌روی، کی نه</h1>
+    <p class="say">روزانه: پاورشل روی ویندوز، کروم، فایل‌های ترکیب و کانف روی دیسک دی. ورود به ظرف فقط وقتی باید فایلی را داخل لینوکس ببینی که روی دیسک نیست؛ مثلاً فهرست گواهی فروشگاه. دستور شکل کلی‌اش این است، امروز لازم نیست بزنی مگر گیر کردی:</p>
+<pre class="ltr" dir="ltr">docker exec -it confluence bash</pre>
+    <p class="say">خروج: نوشتن خروج. پیکربندی تامکت را دستی آنجا عوض نکن.</p>
+    <div class="navp"><a href="#gpo" data-go="gpo">قبلی</a><a href="#trouble" data-go="trouble">شکست</a></div>
+  </section>
+
+  <section class="page" id="trouble">
+    <p class="kicker">شکست</p>
+    <h1>اگر بعد از پاک کردن و نصب خودت قفل نآمد</h1>
+    <p class="say">وینگت نزن. مسیر کامل فایل اجرایی را بزن. هر دو مرورگر را از مدیر وظایف بکش. فقط آدرس امن. اگر کروم سبز و اج قرمز ماند، تب پورت خام اج را ببند، قفل را بخوان: گواهی نامعتبر جداست از هشدار محتوای آمیخته.</p>
+    <p class="say">اگر صدور گفت پوشهٔ اس‌اس‌ال نیست:</p>
+<pre class="ltr" dir="ltr">New-Item -ItemType Directory -Force -Path D:\atlassian-software\nginx-lab\ssl</pre>
+    <div class="navp"><a href="#container" data-go="container">قبلی</a><a href="#check" data-go="check">چک‌لیست</a></div>
+  </section>
+
+  <section class="page" id="check">
+    <p class="kicker">امشب</p>
+    <h1>به همین ترتیب</h1>
+    <ol class="seq">
+      <li>پاک کردن ریشه و پوشهٔ محلی طبق صفحهٔ پاک کردن</li>
+      <li>دانلود اجرایی، نصب ریشه، صدور گواهی، بارگذاری پراکسی</li>
+      <li>کروم را بکش، آدرس امن، قفل را بخوان</li>
+      <li>اج را بکش؛ اگر فقط هشدار آمیخته بود کار را در کروم ادامه بده</li>
+      <li>سه صفحه و خصوصیات و گزارش</li>
+      <li>دو پنجره ویرایش همزمان</li>
+      <li>توکن و یک فراخوانی هویت اگر وقت ماند</li>
+    </ol>
+    <p class="say">سایت همین راهنما بعد از انتشار:</p>
+<pre class="ltr" dir="ltr">https://mojde7th.github.io/confluence-master-2/</pre>
+    <div class="navp"><a href="#trouble" data-go="trouble">قبلی</a><a href="#start" data-go="start">شروع</a></div>
+  </section>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
