@@ -1,5 +1,5 @@
 (function () {
-  const KEY = 'confluence-master-2-read-v1';
+  const KEY = 'confluence-master-2-read-v2';
   const $ = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
   let onlyUnread = false;
@@ -28,7 +28,7 @@
     if (bar && all.length) bar.style.width = Math.round((n / all.length) * 100) + '%';
     const lab = $('#readCount');
     if (lab) lab.textContent = n + ' / ' + all.length;
-    $$('#unreadBox, #unreadBoxTop').forEach((box) => {
+    $$('#unreadBox').forEach((box) => {
       if (!box) return;
       const u = unreadLinks();
       box.innerHTML = u.length
